@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-import matplotlib as plt
+import matplotlib.pyplot as plt
 
 
 # Line Plot
@@ -25,3 +25,11 @@ st.area_chart(df2)
 
 # Bar chart
 st.bar_chart(df2)
+
+
+# matplotlib
+fig, ax = plt.subplots()
+ax.plot(df2)
+ax.set_title("Matplotlib plot")
+
+st.pyplot(fig)
